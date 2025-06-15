@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# b4f-app
 
-## Getting Started
+Plataforma digital voltada para conectar empresas, promover desenvolvimento, trocas de indicações, microconsultorias e muito mais. Desenvolvido como um projeto CRM Headless com autenticação, multiempresa e dados seguros desde o início.
 
-First, run the development server:
+## 🧱 Tecnologias
+
+- [Next.js 14](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Supabase](https://supabase.com/) (PostgreSQL + Auth + RLS)
+- [ESLint](https://eslint.org/)
+- [App Router (Next.js)](https://nextjs.org/docs/app)
+
+## 🚀 Como rodar localmente
+
+1. **Clone o repositório:**
 
 ```bash
+git clone https://github.com/seu-usuario/b4f-app.git
+cd b4f-app
+
+2. **Instale as dependências:**
+npm install
+
+3. **Configure o ambiente:**
+NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+
+4. **Rode o projeto**
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse http://localhost:3000 no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Segurança**
+Todas as tabelas estão protegidas por Row-Level Security (RLS).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A autenticação é feita via Supabase Auth.
 
-## Learn More
+Informações sensíveis (como CNPJ, dados do usuário e empresa) têm regras específicas de acesso.
 
-To learn more about Next.js, take a look at the following resources:
+Estrutura do Projeto
+/src
+  /app
+    layout.tsx
+    page.tsx
+    /login
+    /cadastro
+  /lib
+    supabase.ts
+/public
+.env.local
+README.md
+Autor
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Gustavo Tenorio
+Projeto individual com foco em aprendizado, empreendedorismo digital e boas práticas de desenvolvimento moderno.
